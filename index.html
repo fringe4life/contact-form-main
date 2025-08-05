@@ -151,18 +151,18 @@
       </form>
     </div>
     
-    <!-- Success Toast -->
-    <div class="toast success-toast" id="successToast" role="alert" aria-live="polite" hidden>
-      <div class="toast-content">
-        <div class="toast-header grid-row">
-          <img src="./assets/images/icon-success-check.svg" alt="" class="toast-icon">
-          <h2 class="toast-title font-body-md-bold">Message Sent!</h2>
+    <!-- Success Dialog -->
+    <dialog class="success-dialog" id="successDialog" aria-labelledby="dialog-title" aria-describedby="dialog-message">
+      <div class="dialog-content">
+        <div class="dialog-header grid-row">
+          <img src="./assets/images/icon-success-check.svg" alt="" class="dialog-icon">
+          <h2 id="dialog-title" class="dialog-title font-body-md-bold">Message Sent!</h2>
         </div>
-        <p class="toast-message font-body-sm">
+        <p id="dialog-message" class="dialog-message font-body-sm">
           Thanks for completing the form. We'll be in touch soon!
         </p>
       </div>
-    </div>
+    </dialog>
   </main>
   
   <script src="script.js" type="module"></script>

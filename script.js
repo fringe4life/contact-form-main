@@ -5,7 +5,7 @@
 
 // ===== DOM ELEMENTS =====
 const form = document.getElementById('contactForm');
-const successToast = document.getElementById('successToast');
+const successDialog = document.getElementById('successDialog');
 
 // Form fields
 const firstNameInput = document.getElementById('firstName');
@@ -228,32 +228,22 @@ const validateForm = () => {
 // ===== SUCCESS HANDLING =====
 
 /**
- * Shows the success toast
+ * Shows the success dialog
  */
-const showSuccessToast = () => {
-  successToast.hidden = false;
+const showSuccessDialog = () => {
+  successDialog.showModal();
   
-  // Trigger animation
-  requestAnimationFrame(() => {
-    successToast.classList.add('show');
-  });
-  
-  // Hide toast after 5 seconds
+  // Auto-close dialog after 5 seconds
   setTimeout(() => {
-    hideSuccessToast();
+    hideSuccessDialog();
   }, 5000);
 };
 
 /**
- * Hides the success toast
+ * Hides the success dialog
  */
-const hideSuccessToast = () => {
-  successToast.classList.remove('show');
-  
-  // Wait for animation to complete before hiding
-  setTimeout(() => {
-    successToast.hidden = true;
-  }, 300);
+const hideSuccessDialog = () => {
+  successDialog.close();
 };
 
 /**
@@ -266,8 +256,8 @@ const handleFormSuccess = () => {
   // Clear all error states
   clearAllErrors();
   
-  // Show success toast
-  showSuccessToast();
+  // Show success dialog
+  showSuccessDialog();
   
   // Focus on first field for better UX
   firstNameInput.focus();
