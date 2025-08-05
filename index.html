@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="design-tokens.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <form class="contact-form" id="contactForm" novalidate>
+        <h1 class="form-title font-heading">Contact Us</h1>
+        
+        <div class="form-fields">
+          <!-- Name Fields -->
+          <div class="name-fields">
+            <div class="field-group">
+              <label for="firstName" class="field-label grid-row font-body-sm">
+                First Name
+                <span class="required" aria-label="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="firstName" 
+                name="firstName" 
+                class="field-input font-body-md-regular"
+                placeholder="John"
+                required
+                aria-describedby="firstName-error"
+              >
+              <div id="firstName-error" class="error-message grid-row font-body-sm" role="alert" aria-live="polite"></div>
+            </div>
+            
+            <div class="field-group">
+              <label for="lastName" class="field-label grid-row font-body-sm">
+                Last Name
+                <span class="required" aria-label="required">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="lastName" 
+                name="lastName" 
+                class="field-input font-body-md-regular"
+                placeholder="Appleseed"
+                required
+                aria-describedby="lastName-error"
+              >
+              <div id="lastName-error" class="error-message grid-row font-body-sm" role="alert" aria-live="polite"></div>
+            </div>
+          </div>
+          
+          <!-- Email Field -->
+          <div class="field-group">
+            <label for="email" class="field-label grid-row font-body-sm">
+              Email Address
+              <span class="required" aria-label="required">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              class="field-input font-body-md-regular"
+              placeholder="email@example.com"
+              required
+              aria-describedby="email-error"
+            >
+            <div id="email-error" class="error-message grid-row font-body-sm" role="alert" aria-live="polite"></div>
+          </div>
+          
+          <!-- Query Type -->
+          <div class="field-group">
+            <fieldset class="radio-group">
+              <legend class="field-label grid-row font-body-sm">
+                Query Type
+                <span class="required" aria-label="required">*</span>
+              </legend>
+              <div class="radio-options">
+                <label class="radio-option grid-row">
+                  <input 
+                    type="radio" 
+                    name="queryType" 
+                    value="general" 
+                    class="radio-input"
+                    required
+                  >
+                  <span class="custom-radio"></span>
+                  <span class="radio-text font-body-md-regular">General Enquiry</span>
+                </label>
+                
+                <label class="radio-option grid-row">
+                  <input 
+                    type="radio" 
+                    name="queryType" 
+                    value="support" 
+                    class="radio-input"
+                    required
+                  >
+                  <span class="custom-radio"></span>
+                  <span class="radio-text font-body-md-regular">Support Request</span>
+                </label>
+              </div>
+            </fieldset>
+            <div id="queryType-error" class="error-message grid-row font-body-sm" role="alert" aria-live="polite"></div>
+          </div>
+          
+          <!-- Message Field -->
+          <div class="field-group">
+            <label for="message" class="field-label grid-row font-body-sm">
+              Message
+              <span class="required" aria-label="required">*</span>
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              class="field-input field-textarea font-body-md-regular"
+              placeholder="Hello, I would like to know if you're able to build Shopify e-commerce sites. We're starting a business and we're going to use Shopify. But it would be great to work with an agency who specialises in working with it."
+              required
+              rows="4"
+              aria-describedby="message-error"
+            ></textarea>
+            <div id="message-error" class="error-message grid-row font-body-sm" role="alert" aria-live="polite"></div>
+          </div>
+          
+          <!-- Consent Checkbox -->
+          <div class="field-group">
+            <label class="checkbox-group grid-row">
+              <input 
+                type="checkbox" 
+                id="consent" 
+                name="consent" 
+                class="checkbox-input"
+                required
+                aria-describedby="consent-error"
+              >
+              <span class="checkbox-text font-body-sm">
+                I consent to being contacted by the team
+                <span class="required" aria-label="required">*</span>
+              </span>
+            </label>
+            <div id="consent-error" class="error-message grid-row font-body-sm" role="alert" aria-live="polite"></div>
+          </div>
+          
+          <!-- Submit Button -->
+          <button type="submit" class="submit-btn font-body-md-bold">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+    
+    <!-- Success Toast -->
+    <div class="toast success-toast" id="successToast" role="alert" aria-live="polite" hidden>
+      <div class="toast-content">
+        <div class="toast-header grid-row">
+          <img src="./assets/images/icon-success-check.svg" alt="" class="toast-icon">
+          <h2 class="toast-title font-body-md-bold">Message Sent!</h2>
+        </div>
+        <p class="toast-message font-body-sm">
+          Thanks for completing the form. We'll be in touch soon!
+        </p>
+      </div>
+    </div>
+  </main>
+  
+  <script src="script.js" type="module"></script>
+</body>
+</html>

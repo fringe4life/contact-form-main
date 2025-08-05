@@ -1,0 +1,154 @@
+/* Design Tokens - Contact Form */
+
+/* ===== FONT IMPORTS ===== */
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/Karla-Italic-VariableFont_wght.ttf') format('truetype-variations');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Fallback for browsers that don't support variable fonts */
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/static/Karla-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url('./assets/fonts/static/Karla-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ===== COLORS ===== */
+:root {
+  /* Primary Colors */
+  --color-green-600: hsl(169, 82%, 27%); /* #0C7D69 */
+  --color-green-700: hsl(169, 82%, 22%); /* Darker version for hover */
+  --color-green-200: hsl(148, 38%, 91%); /* #E0F1E8 */
+  --color-red: hsl(0, 66%, 54%); /* #D73C3C */
+  
+  /* Neutral Colors */
+  --color-white: hsl(0, 0%, 100%); /* #FFFFFF */
+  --color-grey-500: hsl(186, 15%, 59%); /* #86A2A5 */
+  --color-grey-900: hsl(187, 24%, 22%); /* #2A4144 */
+}
+
+/* ===== SPACING ===== */
+:root {
+  --spacing-100: 0.5rem; /* 8px */
+  --spacing-150: 0.75rem; /* 12px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-1600: 8rem; /* 128px */
+}
+
+/* ===== TYPOGRAPHY ===== */
+:root {
+  /* Font Family */
+  --font-family: 'Karla', sans-serif;
+  
+  /* Font Weights */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  
+  /* Font Sizes */
+  --font-size-sm: 1rem; /* 16px */
+  --font-size-md: 1.125rem; /* 18px */
+  --font-size-lg: 2rem; /* 32px */
+  
+  /* Line Heights */
+  --line-height-tight: 1; /* 100% */
+  --line-height-normal: 1.5; /* 150% */
+  
+  /* Letter Spacing */
+  --letter-spacing-tight: -0.0625rem; /* -1px */
+  --letter-spacing-normal: 0;
+}
+
+/* ===== FONT UTILITY CLASSES ===== */
+
+/* Heading */
+.font-heading {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+/* Body Medium Bold */
+.font-body-md-bold {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Body Medium Regular */
+.font-body-md-regular {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* Body Small */
+.font-body-sm {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-normal);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+/* ===== LAYOUT UTILITY CLASSES ===== */
+
+/* Grid Row Layout (horizontal items) */
+.grid-row {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+}
+
+/* Grid Row with Start Alignment */
+.grid-row-start {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: start;
+  justify-content: start;
+}
+
+/* Grid Row with Center Alignment */
+.grid-row-center {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== RESPONSIVE FONT SIZES ===== */
+@media (max-width: 768px) {
+  .font-heading {
+    font-size: 1.5rem; /* 24px on mobile */
+  }
+} 
