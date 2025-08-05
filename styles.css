@@ -305,6 +305,8 @@ body {
 
 .dialog-header {
   gap: var(--spacing-200); /* 16px */
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .dialog-icon {
@@ -315,6 +317,30 @@ body {
 .dialog-title {
   color: var(--color-white);
   margin: 0;
+  flex: 1;
+}
+
+.dialog-close {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  padding: var(--spacing-100); /* 8px */
+  border-radius: 0.25rem; /* 4px */
+  transition: background-color 0.2s ease-in-out;
+  inline-size: 2rem; /* 32px */
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.dialog-close:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.dialog-close:focus {
+  outline: 0.125rem solid var(--color-white); /* 2px */
+  outline-offset: 0.125rem; /* 2px */
 }
 
 .dialog-message {

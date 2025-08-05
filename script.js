@@ -233,6 +233,12 @@ const validateForm = () => {
 const showSuccessDialog = () => {
   successDialog.showModal();
   
+  // Focus the close button for keyboard users
+  const closeButton = successDialog.querySelector('.dialog-close');
+  if (closeButton) {
+    closeButton.focus();
+  }
+  
   // Auto-close dialog after 5 seconds
   setTimeout(() => {
     hideSuccessDialog();
@@ -244,6 +250,21 @@ const showSuccessDialog = () => {
  */
 const hideSuccessDialog = () => {
   successDialog.close();
+  
+  // Return focus to the submit button
+  const submitButton = document.querySelector('.submit-btn');
+  if (submitButton) {
+    submitButton.focus();
+  }
+};
+
+/**
+ * Handles keyboard events for the dialog
+ */
+const handleDialogKeyboard = (event) => {
+  if (event.key === 'Escape') {
+    hideSuccessDialog();
+  }
 };
 
 /**
@@ -388,8 +409,8 @@ const initForm = () => {
   // Set up keyboard navigation
   setupKeyboardNavigation();
   
-  // Set up toast close functionality
-  successToast.addEventListener('click', hideSuccessToast);
+  // Set up dialog keyboard events
+  successDialog.addEventListener('keydown', handleDialogKeyboard);
   
   // Set focus on first field for better UX
   firstNameInput.focus();

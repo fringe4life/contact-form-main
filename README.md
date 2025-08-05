@@ -1,100 +1,249 @@
-# Frontend Mentor - Contact form
+# Frontend Mentor - Contact Form Solution
+
+This is a solution to the [Contact form challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj). A fully accessible, responsive contact form with comprehensive validation and modern CSS techniques.
 
 ![Design preview for the Contact form coding challenge](./design/desktop-preview.jpg)
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Features](#features)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Design System](#design-system)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
+Users should be able to:
 
-Your challenge is to build out this contact form and get it looking as close to the design as possible. Pay particular attention to making this form accessible. Building accessible forms is a key skill for front-end developers. So this is a perfect challenge to practice.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to: 
-
-- Complete the form and see a success toast message upon successful submission
-- Receive form validation messages if:
+- ✅ Complete the form and see a success dialog message upon successful submission
+- ✅ Receive form validation messages if:
   - A required field has been missed
   - The email address is not formatted correctly
-- Complete the form only using their keyboard
-- Have inputs, error messages, and the success message announced on their screen reader
-- View the optimal layout for the interface depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
+  - No query type is selected
+  - Consent checkbox is not checked
+- ✅ Complete the form only using their keyboard
+- ✅ Have inputs, error messages, and the success message announced on their screen reader
+- ✅ View the optimal layout for the interface depending on their device's screen size
+- ✅ See hover and focus states for all interactive elements on the page
 
-Want some support on the challenge? [Join our community](https://www.frontendmentor.io/community) and ask questions in the **#help** channel.
+### Features
 
-## Where to find everything
+#### 🎨 **Design System**
+- **6 Colors**: HSL-based color variables with semantic naming
+- **7 Spacing Values**: Consistent spacing scale in rem units
+- **4 Typography Classes**: Utility classes for consistent font usage
+- **Responsive Breakpoints**: Mobile (375px), Tablet (768px), Desktop (1440px)
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design. 
+#### ♿ **Accessibility**
+- **Semantic HTML**: Proper use of `<dialog>`, `<fieldset>`, `<legend>`
+- **ARIA Attributes**: Comprehensive labeling and descriptions
+- **Keyboard Navigation**: Full keyboard support with focus management
+- **Screen Reader Support**: Proper announcements and landmarks
+- **Focus Management**: Dialog focus trapping and return focus
+- **High Contrast**: Accessible color combinations
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`. 
+#### 📱 **Responsive Design**
+- **Mobile-First**: Progressive enhancement approach
+- **CSS Grid**: Modern layout system with utility classes
+- **Flexible Typography**: Responsive font sizing
+- **Touch-Friendly**: Appropriate touch targets
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+#### 🔧 **Form Validation**
+- **Real-time Validation**: Instant feedback on field blur
+- **Custom Error Messages**: Contextual validation messages
+- **HTML5 Validation**: Native browser validation with custom styling
+- **`:user-invalid` Pseudo-class**: Modern validation styling (90% browser support)
 
-All the required assets for this project are in the `/assets` folder. The images are already exported for the correct screen size and optimized.
+#### 🎭 **Interactive States**
+- **Hover Effects**: Subtle visual feedback
+- **Focus States**: Clear focus indicators with pseudo-elements
+- **Loading States**: Submit button loading animation
+- **Success Feedback**: Animated dialog with auto-close
 
-We also include variable and static font files for the required fonts for this project. You can choose to either link to Google Fonts or use the local font files to host the fonts yourself. Note that we've removed the static font files for the font weights that aren't needed for this project.
+### Links
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
-## Building your project
+## My process
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Built with
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- **Semantic HTML5** markup with proper form structure
+- **CSS Custom Properties** for design tokens and theming
+- **CSS Grid** for modern layouts with utility classes
+- **CSS Logical Properties** for better internationalization
+- **CSS `@starting-style`** for modern animations
+- **Vanilla JavaScript** with modern ES6+ features
+- **Local Font Loading** with `@font-face` declarations
+- **Mobile-first** responsive workflow
+- **Progressive Enhancement** approach
 
-## Deploying your project
+### Design System
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+#### **Color Palette**
+```css
+--color-green-600: hsl(169, 82%, 27%); /* Primary brand color */
+--color-green-700: hsl(169, 82%, 22%); /* Hover state */
+--color-green-200: hsl(169, 82%, 82%); /* Success text */
+--color-grey-900: hsl(169, 82%, 12%); /* Dark backgrounds */
+--color-grey-400: hsl(169, 82%, 47%); /* Borders and dividers */
+--color-white: hsl(0, 0%, 100%); /* Text and backgrounds */
+```
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+#### **Typography System**
+```css
+.font-heading { /* 2.5rem/40px - Form title */
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+.font-body-md-bold { /* 1.125rem/18px - Labels, buttons */
+  font-size: 1.125rem;
+  line-height: 1.556;
+  font-weight: 700;
+}
 
-## Create a custom `README.md`
+.font-body-md-regular { /* 1.125rem/18px - Inputs, radio text */
+  font-size: 1.125rem;
+  line-height: 1.556;
+  font-weight: 400;
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+.font-body-sm { /* 0.875rem/14px - Error messages, dialog text */
+  font-size: 0.875rem;
+  line-height: 1.714;
+  font-weight: 400;
+}
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+#### **Spacing Scale**
+```css
+--spacing-100: 0.5rem;   /* 8px */
+--spacing-200: 1rem;     /* 16px */
+--spacing-300: 1.5rem;   /* 24px */
+--spacing-400: 2rem;     /* 32px */
+--spacing-500: 2.5rem;   /* 40px */
+--spacing-600: 3rem;     /* 48px */
+--spacing-700: 4rem;     /* 64px */
+```
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+### What I learned
 
-## Submitting your solution
+#### **Modern CSS Techniques**
+- **CSS Logical Properties**: Using `inline-size`, `block-size`, `margin-inline` for better internationalization
+- **CSS `@starting-style`**: Modern way to define initial animation states
+- **CSS `aspect-ratio`**: Maintaining proportions without JavaScript
+- **CSS `accent-color`**: Styling native form controls consistently
+- **CSS `:user-invalid`**: Modern validation pseudo-class with excellent browser support
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+#### **Performance Optimization**
+```css
+/* Using pseudo-elements for box-shadows reduces painting */
+.submit-btn::before {
+  content: '';
+  position: absolute;
+  inset: -0.25rem;
+  border-radius: inherit;
+  background: var(--color-green-600);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: -1;
+}
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+.submit-btn:focus::before {
+  opacity: 1;
+}
+```
 
-## Sharing your solution
+#### **Accessibility Best Practices**
+```html
+<!-- Semantic dialog with proper ARIA attributes -->
+<dialog class="success-dialog" id="successDialog" 
+        aria-labelledby="dialog-title" aria-describedby="dialog-message">
+  <div class="dialog-content">
+    <div class="dialog-header grid-row">
+      <img src="./assets/images/icon-success-check.svg" alt="" class="dialog-icon">
+      <h2 id="dialog-title" class="dialog-title font-body-md-bold">Message Sent!</h2>
+      <button type="button" class="dialog-close" aria-label="Close dialog">
+        <!-- Close icon -->
+      </button>
+    </div>
+  </div>
+</dialog>
+```
 
-There are multiple places you can share your solution:
+#### **CSS Grid Utility Classes**
+```css
+/* Reusable grid patterns */
+.grid-row {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+}
 
-1. Share your solution page in the **#finished-projects** channel of our [community](https://www.frontendmentor.io/community). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+.grid-row-center {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+```
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+#### **Form Validation Patterns**
+```javascript
+// Modern validation with custom error messages
+const showFieldError = (field, errorElement, message) => {
+  field.setCustomValidity(message);
+  errorElement.textContent = message;
+  errorElement.style.display = 'block';
+};
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+// Real-time validation with :user-invalid
+const setupRealTimeValidation = () => {
+  firstNameInput.addEventListener('blur', validateFirstName);
+  // ... other fields
+};
+```
 
-## Got feedback for us?
+### Continued development
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+Areas I want to continue focusing on:
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+- **CSS Container Queries**: For more granular responsive design
+- **CSS `@layer`**: For better CSS organization and specificity management
+- **CSS `@property`**: For custom property animations
+- **Web Components**: For reusable form components
+- **Testing**: Unit tests for validation logic and accessibility testing
+- **Internationalization**: Multi-language support with logical properties
+- **Performance**: Bundle optimization and critical CSS extraction
 
-**Have fun building!** 🚀
+### Useful resources
+
+- [CSS Logical Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_logical_properties) - Essential for internationalization and modern layouts
+- [CSS `@starting-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/@starting-style) - Modern animation technique for smooth transitions
+- [CSS `:user-invalid`](https://developer.mozilla.org/en-US/docs/Web/CSS/:user-invalid) - Modern validation pseudo-class with great browser support
+- [Dialog Element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog) - Semantic HTML for modal dialogs
+- [CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout) - Modern layout system
+- [Web.dev Accessibility](https://web.dev/learn/accessibility/) - Comprehensive accessibility guide
+- [CSS Custom Properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) - Design tokens and theming
+
+## Author
+
+- Frontend Mentor - [@fringe4life](https://www.frontendmentor.io/profile/fringe4life)
+- GitHub - [@fringe4life](https://github.com/fringe4life)
+
+---
+
+**Note**: This project demonstrates modern web development practices with a focus on accessibility, performance, and maintainable code. The design system approach ensures consistency and scalability, while the comprehensive accessibility features make the form usable by everyone.
