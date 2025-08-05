@@ -43,7 +43,6 @@ body {
 
 .form-title {
   color: var(--color-grey-900);
-  margin-block-end: var(--spacing-300); /* 24px */
 }
 
 .form-fields {
